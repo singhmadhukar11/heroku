@@ -6,3 +6,61 @@
 .mat-toolbar-row, .mat-toolbar-single-row {
     height: 54px;
 }
+.margin-lft-rgt-15{
+	margin: 0px 15px;
+}
+.mat-form-field{
+	width: 130px !important;
+}
+mat-form-field{
+	width: 130px !important;
+	font-size: 13px;
+    
+}
+.mat-grid-tile .mat-figure {
+   justify-content: center !important ;
+   align-items: flex-start !important;
+}
+.md-card-custom{
+	width: 275px;
+    height: 210px;
+}
+#hexagon {
+          width: 60px;
+    height: 30px;
+    background: red;
+    position: relative;
+    }
+    #hexagon:before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 20px solid red;
+    }
+    #hexagon:after {
+     content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 20px solid red;
+    }
+    .txt-align-center{
+    	text-align: center;
+    }
+    .fnt-45{
+    	font-size: 45px;
+    }
+    .projectname{
+    	font-size: 18px;
+    font-weight: 500;
+    color: grey;
+    }
