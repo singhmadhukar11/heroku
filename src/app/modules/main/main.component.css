@@ -25,34 +25,6 @@ mat-form-field{
 	width: 275px;
     height: 210px;
 }
-#hexagon {
-          width: 60px;
-    height: 30px;
-    background: red;
-    position: relative;
-    }
-    #hexagon:before {
-    content: "";
-    position: absolute;
-    top: -20px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 30px solid transparent;
-    border-right: 30px solid transparent;
-    border-bottom: 20px solid red;
-    }
-    #hexagon:after {
-     content: "";
-    position: absolute;
-    bottom: -20px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 30px solid transparent;
-    border-right: 30px solid transparent;
-    border-top: 20px solid red;
-    }
     .txt-align-center{
     	text-align: center;
     }
@@ -63,4 +35,9 @@ mat-form-field{
     	font-size: 18px;
     font-weight: 500;
     color: grey;
+    }
+    .list-txt{
+    	padding-left: 10px;
+    font-size: 16px;
+    font-weight: 500;
     }
