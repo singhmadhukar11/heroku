@@ -1,17 +1,23 @@
-<mat-toolbar color="primary"> <span>...</span>
+<mat-toolbar color="primary"> 
+	<span class="fnt-sze-16">NOTIFICATION</span>
 	<span class="example-fill-remaining-space"></span>
-	<span>
+	<span>	
+  	<mat-icon matBadge="{{notification}}" matBadgeColor="warn" class="notification">notifications</mat-icon>
+    <span class="cdk-visually-hidden">
+    </span>
+    <span class="admin-p"><i class="material-icons">person_outline</i></span>
+    <span class="fnt-sze-16">Admin</span>
   </span>
 </mat-toolbar>
 <div class="content">
 	<div fxLayout="row" fxLayoutAlign="space-between">
-		<div><span class="list-txt">LIST</span></div>
+		<div><span class="list-txt">Project List</span></div>
 						<div fxLayout="row">
 							<div class="margin-lft-rgt-15">
 				<mat-form-field>
 					<mat-label>PROJECT TYPE</mat-label>
 					<mat-select>
-						<mat-option>1</mat-option>
+						<mat-option *ngFor="let tile of tiles" value={{tile.projectname}}>{{tile.projectname}}</mat-option>
 					</mat-select>
 				</mat-form-field>
 			</div>
@@ -19,7 +25,7 @@
 				<mat-form-field>
 					<mat-label>STATUS</mat-label>
 					<mat-select>
-						<mat-option>2</mat-option>
+						<mat-option *ngFor="let tile of tiles" value={{tile.status}}>{{tile.status}}</mat-option>
 					</mat-select>
 				</mat-form-field>
 			</div>
@@ -27,15 +33,15 @@
 				<mat-form-field>
 					<mat-label>DATE</mat-label>
 					<mat-select>
-						<mat-option>3</mat-option>
+						<mat-option *ngFor="let tile of tiles" value={{tile.date}}>{{tile.date}}</mat-option>
 					</mat-select>
 				</mat-form-field>
 			</div>
 			<div>
 <button mat-raised-button color="primary">Create Project</button>
 			</div>
-					</div>
 	</div>
+		</div>
 
 	<div>
 		<mat-grid-list cols="4" rowHeight="250px" gutterSize="10px">
@@ -45,14 +51,16 @@
 						<div>{{tile.date}}</div>
 						<div><i class="material-icons">more_horiz</i></div>
 					</div>
+					<span class="cld-txt">OG</span>
 					<div class="txt-align-center" style="margin: 15px 0px;"><i class="material-icons fnt-45">cloud</i>
 					</div>
-					<div class="txt-align-center projectname">	<span>{{tile.projectname}}</span>
+					<div class="txt-align-center projectname"><span>{{tile.projectname}}</span>
 					</div>
-					<div class="txt-align-center">	<span>{{tile.status}}</span>
+					<div class="txt-align-center" [ngClass]="{'red': tile.status == 'failed', 'green': tile.status == 'completed', 'orange': tile.status == 'In-progress', 'blue': tile.status == 'on-hold' }" style="font-size: 16px;font-weight: 500;">	<span>{{tile.status}}</span>
 					</div>
 				</mat-card>
 			</mat-grid-tile>
 		</mat-grid-list>
 	</div>
 </div>
+

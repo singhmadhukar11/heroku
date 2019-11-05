@@ -40,4 +40,66 @@ mat-form-field{
     	padding-left: 10px;
     font-size: 16px;
     font-weight: 500;
+        position: relative;
+    top: 13px;
     }
+    .mat-toolbar.mat-primary {
+    background: #fff !important;
+    color: grey;
+    border-bottom: 1px solid #dedede;
+}
+.fnt-sze-16{
+	font-size: 16px;
+}
+.mat-badge-medium .mat-badge-content {
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+}
+.mat-badge-warn .mat-badge-content {
+    color: #fff;
+    background: #f44336;
+    font-size: 9px;
+}
+.mat-badge-medium.mat-badge-overlap.mat-badge-after .mat-badge-content {
+    right: 0px;
+}
+.mat-badge-medium.mat-badge-above .mat-badge-content {
+    top: -8px;
+}
+.admin-p{
+	margin: 10px;
+    border: 2px solid;
+    border-radius: 50%;
+    font-size: 16px;
+}
+
+.admin-p i{
+	position: relative;
+    top: 4px;
+    font-size: 20px;
+}
+.notification{
+	font-size: 20px;
+    top: 5px;
+    position: relative;
+}
+.red{
+	color: red;
+}
+.green{
+	color: green;
+}
+.orange{
+	color: orange;
+}
+.blue{
+	color:blue;
+}
+.cld-txt{
+	text-align: center;
+    display: block;
+    position: relative;
+    top: 24%;
+    color: aliceblue;
+}

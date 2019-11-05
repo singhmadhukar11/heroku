@@ -12,12 +12,17 @@ export interface Tile {
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
+
+  notification = 2;
+
+
 
    tiles: Tile[] = [
-    {date: '26 june 2019', projectname: "Task Developer", status: "In-progress", color: 'lightblue'},
-    // {date: '26 june 2019', projectname: "Task Developer", status: "In-progress", color: 'lightblue'}
-    
+    {date: '26 june 2019', projectname: "Task Developer", status: "In-progress", color: 'orange'},
+    {date: '16 june 2019', projectname: "NO Developer", status: "completed", color: 'green'},
+    {date: '12 june 2019', projectname: "Work", status: "failed", color: 'red'},
+    {date: '1 june 2019', projectname: "Work1", status: "on-hold", color: 'blue'}
   ];
 
   ngOnInit() {
