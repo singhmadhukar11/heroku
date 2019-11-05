@@ -16,8 +16,6 @@ export class MainComponent implements OnInit {
 
   notification = 2;
 
-
-
    tiles: Tile[] = [
     {date: '26 june 2019', projectname: "Task Developer", status: "In-progress", color: 'orange'},
     {date: '16 june 2019', projectname: "NO Developer", status: "completed", color: 'green'},
@@ -25,6 +23,17 @@ export class MainComponent implements OnInit {
     {date: '1 june 2019', projectname: "Work1", status: "on-hold", color: 'blue'}
   ];
 
+alert(data){
+	alert(data.projectname);
+}
+
+delete(){
+	alert("Deleted");
+}
+
+edit(){
+	alert("Edited");
+}
   ngOnInit() {
   }
 

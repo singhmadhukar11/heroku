@@ -1,10 +1,19 @@
 <mat-toolbar color="primary"> 
 	<span class="fnt-sze-16">NOTIFICATION</span>
 	<span class="example-fill-remaining-space"></span>
+
 	<span>	
+  	<button mat-icon-button [matMenuTriggerFor]="menu" style="position: relative;bottom: 3px;">
   	<mat-icon matBadge="{{notification}}" matBadgeColor="warn" class="notification">notifications</mat-icon>
+	</button>
     <span class="cdk-visually-hidden">
+    	<mat-menu #menu="matMenu">
+  							<button mat-menu-item (click)="alert(tile)">Detail</button>
+  							<button mat-menu-item (click)="edit()">Edit</button>
+  							<button mat-menu-item (click)="delete()">Delete</button>
+							</mat-menu>
     </span>
+
     <span class="admin-p"><i class="material-icons">person_outline</i></span>
     <span class="fnt-sze-16">Admin</span>
   </span>
@@ -49,7 +58,16 @@
 				<mat-card class="md-card-custom">
 					<div fxLayout="row" fxLayoutAlign="space-between">
 						<div>{{tile.date}}</div>
-						<div><i class="material-icons">more_horiz</i></div>
+						<div>
+							<button mat-icon-button [matMenuTriggerFor]="menu" style="position: relative;bottom: 12px;">
+  							<mat-icon>more_horiz</mat-icon>
+							</button>
+							<mat-menu #menu="matMenu">
+  							<button mat-menu-item (click)="alert(tile)">Detail</button>
+  							<button mat-menu-item (click)="edit()">Edit</button>
+  							<button mat-menu-item (click)="delete()">Delete</button>
+							</mat-menu>
+						</div>
 					</div>
 					<span class="cld-txt">OG</span>
 					<div class="txt-align-center" style="margin: 15px 0px;"><i class="material-icons fnt-45">cloud</i>
